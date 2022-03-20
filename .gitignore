@@ -1,3 +1,7 @@
 .idea
 *.iml
 venv
+*.properties
+datasets/idealista
+datasets/lookup_tables
+datasets/opendatabcn-income

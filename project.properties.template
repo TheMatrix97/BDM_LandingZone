@@ -1,0 +1,8 @@
+[mongodb]
+database.user=admin
+database.host=10.4.41.74:27017
+database.password=
+
+[hdfs]
+hdfs.host=10.4.41.74:9870
+hdfs.user=bdm

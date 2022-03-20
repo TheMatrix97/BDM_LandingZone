@@ -1,0 +1,7 @@
+[{
+  "name": "idealista",
+  "format": "json",
+  "source_path": "/idealista/*.json",
+  "dest_path_landing_temp": "/user/bdm/tempLandingZone/idealista",
+  "dest_path_landing": "/user/bdm/landingZone/idealista"
+}]
