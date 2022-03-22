@@ -1,7 +1,7 @@
 import json
 
 
-class LandingLogEntry:
+class TempLandingLogEntry:
     file_name: str = None
     timestamp: float = None
     source_name: str = None

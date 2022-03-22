@@ -1,7 +1,16 @@
-[{
+[
+  {
   "name": "idealista",
   "format": "json",
   "source_path": "/idealista/*.json",
   "dest_path_landing_temp": "/user/bdm/tempLandingZone/idealista",
   "dest_path_landing": "/user/bdm/landingZone/idealista"
-}]
+  },
+  {
+    "name": "opendatabcn-income",
+    "format": "csv",
+    "source_path": "/opendatabcn-income/*.csv",
+    "dest_path_landing_temp": "/user/bdm/tempLandingZone/opendata-income",
+    "dest_path_landing": "/user/bdm/landingZone/opendata-income"
+  }
+]
