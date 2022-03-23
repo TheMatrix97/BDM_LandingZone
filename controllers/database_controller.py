@@ -1,5 +1,4 @@
 import pymongo
-import configparser
 
 from properties_parser import parse_properties
 
@@ -31,3 +30,6 @@ class Database:
 
     def find_one(self, collection, query):
         return self._database[collection].find_one(query)
+
+    def aggregate(self, collection, pipeline):
+        return self._database[collection].aggregate(pipeline)

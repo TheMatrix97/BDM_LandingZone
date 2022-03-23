@@ -1,6 +1,7 @@
 import argparse
 
-from temporal_load import batch_load_temporal
+from persist_landing import LandingLoadProcess
+from temporal_load import TemporalLoadProcess
 
 
 def build_arg_parser():
@@ -18,10 +19,9 @@ def build_arg_parser():
 def main():
     args = build_arg_parser()
     if args.temporal_batch:
-        batch_load_temporal(args.datasource_folder)
+        TemporalLoadProcess(args.datasource_folder).run_process()
     if args.persist_batch:
-        print('TODO')
-        # batch load persist
+        LandingLoadProcess().run_process()
 
 
 main()
