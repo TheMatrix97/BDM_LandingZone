@@ -14,11 +14,18 @@
     "dest_path_landing": "/user/bdm/landingZone/opendata-income"
   },
   {
-    "name": "lookup_tables",
+    "name": "lookup_tables_idealista",
     "format": "csv",
-    "source_path": "/lookup_tables/*.csv",
-    "dest_path_landing_temp": "/user/bdm/tempLandingZone/lookup_tables",
-    "dest_path_landing": "/user/bdm/landingZone/lookup_tables"
+    "source_path": "/lookup_tables/idealista*.csv",
+    "dest_path_landing_temp": "/user/bdm/tempLandingZone/lookup_tables/idealista",
+    "dest_path_landing": "/user/bdm/landingZone/lookup_tables/idealista"
+  },
+  {
+    "name": "lookup_tables_opendatabcn",
+    "format": "csv",
+    "source_path": "/lookup_tables/income_opendata*.csv",
+    "dest_path_landing_temp": "/user/bdm/tempLandingZone/lookup_tables/opendatabcn",
+    "dest_path_landing": "/user/bdm/landingZone/lookup_tables/opendatabcn"
   },
   {
     "name": "fotocasa",
