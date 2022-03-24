@@ -5,3 +5,5 @@ venv
 datasets/idealista
 datasets/lookup_tables
 datasets/opendatabcn-income
+datasets/fotocasa
+__pycache__/

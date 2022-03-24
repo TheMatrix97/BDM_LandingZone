@@ -12,5 +12,19 @@
     "source_path": "/opendatabcn-income/*.csv",
     "dest_path_landing_temp": "/user/bdm/tempLandingZone/opendata-income",
     "dest_path_landing": "/user/bdm/landingZone/opendata-income"
+  },
+  {
+    "name": "lookup_tables",
+    "format": "csv",
+    "source_path": "/lookup_tables/*.csv",
+    "dest_path_landing_temp": "/user/bdm/tempLandingZone/lookup_tables",
+    "dest_path_landing": "/user/bdm/landingZone/lookup_tables"
+  },
+  {
+    "name": "fotocasa",
+    "format": "json",
+    "source_path": "/fotocasa/*.json",
+    "dest_path_landing_temp": "/user/bdm/tempLandingZone/fotocasa",
+    "dest_path_landing": "/user/bdm/landingZone/fotocasa"
   }
 ]
