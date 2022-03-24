@@ -37,5 +37,5 @@ class LandingLoadProcess(Process):
             {"$match": {"source_name": source_name}},
             {"$sort": {"timestamp": -1}},
             {"$limit": 1}])
-        max_timestamp = 0 if not res.alive else TempLandingLogEntry(res.next()).timestamp
+        max_timestamp = 0 if not res.alive else res.next()['timestamp']
         return max_timestamp

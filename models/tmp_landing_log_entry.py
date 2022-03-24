@@ -11,11 +11,6 @@ class TempLandingLogEntry:
         self.file_name = file_name
         self.source_name = source_name
 
-    def __init__(self, d: dict):
-        self.timestamp = d['timestamp']
-        self.file_name = d['file_name']
-        self.source_name = d['source_name']
-
     def to_dict(self):
         return self.__dict__
 
