@@ -7,6 +7,7 @@ class Datasource:
     source_path: str = None
     dest_path_landing_temp: str = None
     dest_path_landing: str = None
+    group_regex: str = None
 
     def __init__(self, aux: dict):
         self.name = aux['name']
@@ -14,6 +15,7 @@ class Datasource:
         self.source_path = aux['source_path']
         self.dest_path_landing = aux['dest_path_landing']
         self.dest_path_landing_temp = aux['dest_path_landing_temp']
+        self.group_regex = aux.get('group_regex')
 
     def to_dict(self):
         return self.__dict__

@@ -34,7 +34,7 @@ class TemporalLoadProcess(Process):
             try:
                 if file_name in processed_files:  # if exists skip processing
                     continue
-                self._client.upload(hdfs_path=dest_path, local_path=file)
+                self._hdfs_client.upload(hdfs_path=dest_path, local_path=file)
                 print(f'[{datasource.name}] file loaded -> {dest_path}')
                 processed_files.add(file_name)  # Add to current processed files
             except Exception as e:

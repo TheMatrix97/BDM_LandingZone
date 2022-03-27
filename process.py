@@ -1,3 +1,4 @@
+import os
 from abc import abstractmethod
 
 from hdfs import InsecureClient
@@ -11,7 +12,7 @@ class Process:
     def __init__(self):
         self._host = parse_properties('hdfs')['hdfs.host']
         self._user = parse_properties('hdfs')['hdfs.user']
-        self._client = InsecureClient(f'http://{self._host}', user=self._user)  # Connect to HDFS
+        self._hdfs_client = InsecureClient(f'http://{self._host}', user=self._user)  # Connect to HDFS
         self._database = Database('p1')
 
     @abstractmethod
@@ -21,3 +22,9 @@ class Process:
     @staticmethod
     def _linux_normalize_path(path: str):  # required for windows compatibility
         return path.replace('\\', '/')
+
+    @staticmethod
+    def remove_file(file_path):
+        if os.path.exists(file_path):
+            os.remove(file_path)
+

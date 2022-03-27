@@ -33,3 +33,6 @@ class Database:
 
     def aggregate(self, collection, pipeline):
         return self._database[collection].aggregate(pipeline)
+
+    def collection(self, collection):
+        return self._database[collection]

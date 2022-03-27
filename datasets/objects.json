@@ -4,7 +4,8 @@
   "format": "json",
   "source_path": "/idealista/*.json",
   "dest_path_landing_temp": "/user/bdm/tempLandingZone/idealista",
-  "dest_path_landing": "/user/bdm/landingZone/idealista"
+  "dest_path_landing": "/user/bdm/landingZone/idealista",
+  "group_regex":  "(\\d{4}_\\d{2}).*"
   },
   {
     "name": "opendatabcn-income",

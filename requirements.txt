@@ -1,2 +1,5 @@
 hdfs
 pymongo
+pyarrow==7.0.0
+parquet-tools
+pandas
