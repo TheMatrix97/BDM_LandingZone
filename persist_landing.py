@@ -1,3 +1,4 @@
+import csv
 import itertools
 import json
 import os
@@ -101,8 +102,7 @@ class LandingLoadProcess(Process):
         for index, file_name in enumerate(files_names):
             path = self._linux_normalize_path(os.path.join(datasource.dest_path_landing_temp, file_name))
             with self._hdfs_client.read(path, encoding='utf-8') as reader:
-                # TODO enable support to CSV and other formats
-                content = json.load(reader)
+                content = self._get_content_from_reader(datasource.format, reader)
                 final_content.extend(content)
         table = pyarrow.Table.from_pylist(final_content)
         with pq.ParquetWriter(parquet_path, schema=table.schema) as writer:
@@ -110,6 +110,15 @@ class LandingLoadProcess(Process):
             writer.write_table(table)
             writer.close()
             return parquet_path
+
+    def _get_content_from_reader(self, format_file, reader):
+        if format_file == 'json':
+            return json.load(reader)
+        elif format_file == 'csv':
+            return list(csv.DictReader(reader))
+        else:
+            return []
+
 
     def _get_files_to_process(self, max_time, source_name):
         # Search in landing tmp files to pending to process
